@@ -86,7 +86,7 @@ isolated_build = True
 [testenv]
 commands =
     pip install -r dev_requirements.txt
-    coverage run --source aiopathlib -m pytest tests
+    coverage run --source search_placeholder -m pytest
 passenv = CI
 """
 
