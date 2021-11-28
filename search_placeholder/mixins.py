@@ -1,5 +1,15 @@
 import re
 
+PLACEHOLDER_PREFIX = "请输入 "
+
+try:
+    from django.conf import settings
+except ImportError:
+    ...
+else:
+    if (_p := getattr(settings, "PLACEHOLDER_PREFIX", None)) is not None:
+        PLACEHOLDER_PREFIX = _p
+
 RE_PREFIX = re.compile(r"[=^]")
 
 
@@ -7,7 +17,7 @@ class PlaceholderMixin:
     """Auto generate placeholder in search input"""
 
     change_list_template = "search_placeholder/change_list.html"
-    placeholder_prefix = "请输入 "
+    placeholder_prefix = PLACEHOLDER_PREFIX
 
     def changelist_view(self, request, extra_context=None):
         if fs := getattr(self, "search_fields", None):
