@@ -4,7 +4,7 @@ Auto add placeholder content for django admin
 ## Install
 - By git
 ```bash
-pip install git+https://hub.fastgit.org/waketzheng/django-search-placeholder.git
+pip install search-placeholder
 ```
 
 ## Usage
