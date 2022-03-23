@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "search_placeholder"
-version = "0.1.1"
+version = "0.1.2"
 description = "Auto add placeholder content for django admin"
 authors = ["Waket Zheng <waketzheng@gmail.com>"]
 license = "MIT"
